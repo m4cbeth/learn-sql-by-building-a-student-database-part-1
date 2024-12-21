@@ -4,6 +4,7 @@
 
 PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
 echo $($PSQL "TRUNCATE students, majors, courses, majors_courses")
+
 cat courses_test.csv | while IFS="," read MAJOR COURSE
 do
   if [[ $MAJOR != major ]]; then
@@ -41,6 +42,9 @@ do
   if [[ $INSERT_MAJORS_COURSES_RESULT == "INSERT 0 1" ]]; then
     echo "Inserted into majors_courses, $MAJOR : $COURSE"
   fi
-
   fi
+done
+cat students_test.csv | while IFS="," read FIRST LAST MAJOR GPA
+do
+  echo $FIRST
 done

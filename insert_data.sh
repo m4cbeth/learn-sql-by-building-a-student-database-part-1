@@ -53,7 +53,7 @@ do
     if [[ -z $MAJOR_ID ]]; then
       # set to null
       MAJOR_ID=null
-    echo $MAJOR_ID
+      echo $MAJOR_ID
     fi
     # insert student
   fi 

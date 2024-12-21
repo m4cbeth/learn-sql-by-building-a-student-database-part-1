@@ -21,6 +21,7 @@ do
       fi
 
       # get new major_id
+      MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
 
     fi
   # get course_id
